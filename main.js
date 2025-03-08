@@ -15,7 +15,7 @@
   проверить что на входе массив не пустой (ограничение № 2)
   отфильтровать массив проверив, что каждый элемент массива строка и строка не пустая (ограничение № 3)
   привести массив к строке по разделителю запятая
-найти в строке индекс последнего вхождения запятой
+  найти в строке индекс последнего вхождения запятой
 вырезать из строки подстроку №1 от начала строки до индекса с запятой
 вырезать из строки подстроку №2 от следующего индекса за запятой до конца строки
 сложить подстроку № 1, строку " and ", подстроку № 2 и вернуть как результат 
@@ -28,9 +28,10 @@ function formatWords(words){
 
   if (!Array.isArray(words)) return ''
   if (!isValid(words)) return ''
-  const filteredWords = words.filter(el=> !!el)
+  const filteredWords = words.filter(el=> !!el).join(',')
   if (!isValid(filteredWords)) return ''
-  return filteredWords.join(',')
+  const targetIndex = filteredWords.lastIndexOf(',')
+  return targetIndex
 
 }
 
