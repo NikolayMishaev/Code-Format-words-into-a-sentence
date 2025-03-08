@@ -12,7 +12,7 @@
 
 псевдокод:
   проверить что на входе массив (ограничение № 1)
-проверить что на входе массив не пустой (ограничение № 2)
+  проверить что на входе массив не пустой (ограничение № 2)
 отфильтровать массив проверив, что каждый элемент массива строка и строка не пустая (ограничение № 3)
 привести массив к строке по разделителю запятая
 найти в строке индекс последнего вхождения запятой
@@ -24,13 +24,12 @@
 
 function formatWords(words){
   if (!Array.isArray(words)) return ''
+  if (words.length === 0) return ''
   return 'cod'
 }
 
-console.log(formatWords())
-console.log(formatWords(undefined))
-console.log(formatWords({}))
 console.log(formatWords([]))
+console.log(formatWords(['']))
 
 
 
