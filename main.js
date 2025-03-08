@@ -16,9 +16,11 @@
   отфильтровать массив проверив, что каждый элемент массива строка и строка не пустая (ограничение № 3)
   привести массив к строке по разделителю запятая
   найти в строке индекс последнего вхождения запятой
-вырезать из строки подстроку №1 от начала строки до индекса с запятой
-вырезать из строки подстроку №2 от следующего индекса за запятой до конца строки
-сложить подстроку № 1, строку " and ", подстроку № 2 и вернуть как результат 
+  вырезать из строки подстроку №1 от начала строки до индекса с запятой
+  вырезать из строки подстроку №2 от следующего индекса за запятой до конца строки
+  сложить подстроку № 1, строку " and ", подстроку № 2
+  добавить пробелы после запятых
+  вернуть результат
 
 */
 
@@ -31,7 +33,7 @@ function formatWords(words){
   const filteredWords = words.filter(el=> !!el).join(',')
   if (!isValid(filteredWords)) return ''
   const targetIndex = filteredWords.lastIndexOf(',')
-  return filteredWords.slice(0,targetIndex) + ' and ' + filteredWords.slice(targetIndex + 1)
+  return (filteredWords.slice(0,targetIndex) + ' and ' + filteredWords.slice(targetIndex + 1)).replace(/,/g,', ')
 
 }
 
@@ -40,4 +42,4 @@ function formatWords(words){
 // console.log(formatWords([]))
 // console.log(formatWords(['']))
 // console.log(formatWords(['','','']))
-console.log(formatWords(['ninja','', 'samurai','', 'ronin']))
+console.log(formatWords(['ninja','', 'samurai','', 'ronin','alex','vlad']))
