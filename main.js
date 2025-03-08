@@ -23,14 +23,20 @@
 */
 
 function formatWords(words){
+
+  const isValid = (arr) => arr.length > 0
+
   if (!Array.isArray(words)) return ''
-  if (words.length === 0) return ''
+  if (!isValid(words)) return ''
   const filteredWords = words.filter(el=> !!el)
-  if (filteredWords.length === 0) return ''
+  if (!isValid(filteredWords)) return ''
   return 'cod'
+
 }
 
 
-
+console.log(formatWords(undefined))
+console.log(formatWords([]))
+console.log(formatWords(['']))
 console.log(formatWords(['','','']))
 console.log(formatWords(['ninja','', 'samurai','', 'ronin']))
