@@ -26,20 +26,21 @@
 
 function formatWords(words){
 
-  const isValid = (arr) => arr.length > 0
+  const isValid = (arr) => arr.length < 2
 
   if (!Array.isArray(words)) return ''
-  if (!isValid(words)) return ''
+  if (isValid(words)) return words + ''
   const filteredWords = words.filter(el=> !!el).join(',')
-  if (!isValid(filteredWords)) return ''
+  if (isValid(filteredWords)) return filteredWords + ''
   const targetIndex = filteredWords.lastIndexOf(',')
   return (filteredWords.slice(0,targetIndex) + ' and ' + filteredWords.slice(targetIndex + 1)).replace(/,/g,', ')
 
 }
 
 
-// console.log(formatWords(undefined))
-// console.log(formatWords([]))
-// console.log(formatWords(['']))
-// console.log(formatWords(['','','']))
+console.log(formatWords(undefined))
+console.log(formatWords([]))
+console.log(formatWords(['']))
+console.log(formatWords(['','','']))
 console.log(formatWords(['ninja','', 'samurai','', 'ronin','alex','vlad']))
+console.log(formatWords(['one']))
