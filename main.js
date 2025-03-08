@@ -31,7 +31,7 @@ function formatWords(words){
   const filteredWords = words.filter(el=> !!el).join(',')
   if (!isValid(filteredWords)) return ''
   const targetIndex = filteredWords.lastIndexOf(',')
-  return targetIndex
+  return filteredWords.slice(0,targetIndex) + ' and ' + filteredWords.slice(targetIndex + 1)
 
 }
 
