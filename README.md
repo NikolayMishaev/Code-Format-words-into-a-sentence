@@ -5,7 +5,7 @@
 ### Описание задачи
 - создать функцию, которая будет заменять последнюю запятую в предложении на строку ' and '
 ### Пример
-[ "ninja", "", "samurai", "", "ronin", "alex", "vlad" ]   -->   "ninja, samurai, ronin, alex and vlad"
+- [ "ninja", "", "samurai", "", "ronin", "alex", "vlad" ]   -->   "ninja, samurai, ronin, alex and vlad"
 ### Данные на входе
 - массив со строками
 ### Данные на выходе
