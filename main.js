@@ -14,7 +14,7 @@
   проверить что на входе массив (ограничение № 1)
   проверить что на входе массив не пустой (ограничение № 2)
   отфильтровать массив проверив, что каждый элемент массива строка и строка не пустая (ограничение № 3)
-привести массив к строке по разделителю запятая
+  привести массив к строке по разделителю запятая
 найти в строке индекс последнего вхождения запятой
 вырезать из строки подстроку №1 от начала строки до индекса с запятой
 вырезать из строки подстроку №2 от следующего индекса за запятой до конца строки
@@ -30,13 +30,13 @@ function formatWords(words){
   if (!isValid(words)) return ''
   const filteredWords = words.filter(el=> !!el)
   if (!isValid(filteredWords)) return ''
-  return 'cod'
+  return filteredWords.join(',')
 
 }
 
 
-console.log(formatWords(undefined))
-console.log(formatWords([]))
-console.log(formatWords(['']))
-console.log(formatWords(['','','']))
+// console.log(formatWords(undefined))
+// console.log(formatWords([]))
+// console.log(formatWords(['']))
+// console.log(formatWords(['','','']))
 console.log(formatWords(['ninja','', 'samurai','', 'ronin']))
